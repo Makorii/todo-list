@@ -3,7 +3,7 @@ import NewTask from './NewTask'
 import { Box, Center, Container, Grid } from '@chakra-ui/react'
 import { useState } from 'react'
 import ContainerTasks from './ContainerTasks'
-import SelectsTaks from './SelectTask'
+import SelectsTaks from './SelectsTask'
 
 function Main() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || "")
