@@ -1,8 +1,9 @@
 import React from 'react'
 import NewTask from './NewTask'
-import { Box, Center, Container } from '@chakra-ui/react'
+import { Box, Center, Container, Grid } from '@chakra-ui/react'
 import { useState } from 'react'
 import ContainerTasks from './ContainerTasks'
+import SelectsTaks from './SelectTask'
 
 function Main() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || "")
@@ -40,9 +41,12 @@ function Main() {
     };
   return (
     <Container maxW="container.sm">
-      <NewTask onSubmit={onSubmit} />
+      <Grid templateColumns="repeat(2, 1fr)" gap={6} my={10}>
+        <NewTask onSubmit={onSubmit} />
+        <SelectsTaks arrTask={tasks}/>
+      </Grid>
       <Center>
-        <Box>
+        <Box w="60%">
           <ContainerTasks 
             arrTask={tasks}
             onClose={onClose}
