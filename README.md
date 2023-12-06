@@ -17,12 +17,12 @@ En el header podemos ver el título de la app.
 
 ### ✦ Main
 
-En esta sección estan: el input para agregar tarea junto con su boton para realizar la acción y un select con 3 opciones (Todas, Completas e Incompletas).
+En esta sección esta el input para agregar una nueva tarea, junto con su boton para realizar la acción, y un select con 3 opciones (Todas, Completas e Incompletas).
 Además se van a mostrar la lista de tareas agregadas, junto con dos botones: el primero que sirve para indicar si la tarea esta completada y el segundo para borrar la tarea.
 
 ## RECURSOS
 
-Para este sitio utilizamos los siguientes recursos:
+Para esta app utilicé los siguientes recursos:
 
 -   React Icons -> [ReactIcons](https://react-icons.github.io/react-icons/)
 -   Chakra UI -> [Chakra](https://chakra-ui.com/)
