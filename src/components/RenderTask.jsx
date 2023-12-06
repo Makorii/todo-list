@@ -16,12 +16,14 @@ function RenderTask({id, task, onClose, onStatus, status}) {
       <Stack direction={{ base: "row" }} flexWrap={"wrap"} justifyContent={"center"}>
         <CardBody textAlign={"center"} minWidth={"10rem"}>
           <Heading size="md">Nueva tarea</Heading>
-          {status === false ? <Text py="2">{task}</Text> : <Text as='s' py="2">{task}</Text>}
+          {status === false ? <Text py="2">{task}</Text> : <Text as='s' py="2" color={"gray"}>{task}</Text>}
         </CardBody>
         <CardFooter alignItems={'center'}>
-          <Button variant="outline" colorScheme="purple" onClick={() => onStatus(id)}>
+          {status === false ? <Button variant="outline" colorScheme="purple" onClick={() => onStatus(id)}>
             <GiCheckMark />
-          </Button>
+          </Button> : <Button variant="outline" colorScheme="gray" backgroundColor={"gray"} _hover={"none"} onClick={() => onStatus(id)}>
+            <GiCheckMark color='white'/>
+          </Button>}
           <Button type='button' onClick={() => onClose(id)}>
             <FcEmptyTrash size={40} />
           </Button>
