@@ -13,8 +13,8 @@ function RenderTask({id, task, onClose, onStatus, status}) {
       variant="outline"
       my={5}
     >
-      <Stack direction={{ base: "row" }}>
-        <CardBody>
+      <Stack direction={{ base: "row" }} flexWrap={"wrap"} justifyContent={"center"}>
+        <CardBody textAlign={"center"} minWidth={"10rem"}>
           <Heading size="md">Nueva tarea</Heading>
           {status === false ? <Text py="2">{task}</Text> : <Text as='s' py="2">{task}</Text>}
         </CardBody>
