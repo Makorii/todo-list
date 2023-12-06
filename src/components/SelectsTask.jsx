@@ -17,7 +17,7 @@ function SelectsTaks({tasksLocal, setTasks}) {
   };
 
   return (
-    <Select placeholder="Seleccione" onChange={(e) => onSelect(e.target.value)}>
+    <Select placeholder="Seleccione" variant={"filled"} onChange={(e) => onSelect(e.target.value)}>
       <option value="Todas">Todas</option>
       <option value="Completas" >Completas</option>
       <option value="Incompletas">Incompletas</option>
