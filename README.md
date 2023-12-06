@@ -25,6 +25,7 @@ Además se van a mostrar la lista de tareas agregadas, junto con dos botones: el
 Para este sitio utilizamos los siguientes recursos:
 
 -   React Icons -> [ReactIcons](https://react-icons.github.io/react-icons/)
+-   Chakra UI -> [Chakra](https://chakra-ui.com/)
 
 ## CONTACTO
 
