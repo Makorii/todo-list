@@ -2,20 +2,24 @@ import React, { useState } from 'react'
 import { Select } from '@chakra-ui/react'
 
 
-function SelectsTaks({arrTask}) {
-  const [completas, setCompletas] = useState("Completas")
+function SelectsTaks({tasksLocal, setTasks}) {
 
-  const onSelect = () => {
-    console.log("hola hice algo")
-    if(setCompletas("Completas")) {
-      arrTask.map((task) => [{...task}])
-      console.log(arrTask)
+  const onSelect = (value) => {
+    if (value === "Completas") {
+      const taskCompletes = tasksLocal.filter((task) => task.estado === true);
+      setTasks(taskCompletes);
+    } else if (value === "Incompletas") {
+      const taskIncompletes = tasksLocal.filter((task) => task.estado === false);
+      setTasks(taskIncompletes);
+    } else if (value === "Todas") {
+      setTasks(tasksLocal);
     }
-  }
+  };
 
   return (
-    <Select placeholder="Todas" onChange={(e) => onSelect(e.target.value)}>
-      <option value={completas} >Completas</option>
+    <Select placeholder="Seleccione" onChange={(e) => onSelect(e.target.value)}>
+      <option value="Todas">Todas</option>
+      <option value="Completas" >Completas</option>
       <option value="Incompletas">Incompletas</option>
     </Select>
   );
