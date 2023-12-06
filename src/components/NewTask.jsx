@@ -15,7 +15,7 @@ function NewTask({onSubmit}) {
 
   return (
     <Box>
-      <Input placeholder='Ingresar nueva tarea' value={task} onChange={(e) => setTask(e.target.value)}/>
+      <Input placeholder='Ingresar nueva tarea' variant={"filled"} value={task} onChange={(e) => setTask(e.target.value)}/>
       <Button colorScheme='purple' type='submit' onClick={(e) => addTask(e)} my={5}>Button</Button>
     </Box>
   )
