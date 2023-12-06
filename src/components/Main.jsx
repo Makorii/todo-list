@@ -8,6 +8,8 @@ import SelectsTaks from './SelectsTask'
 function Main() {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || "")
 
+  const tasksLocal = JSON.parse(localStorage.getItem("tasks"))
+
     const onSubmit = (task, e) => {
       e.preventDefault()
       const NewTask = {
@@ -43,7 +45,7 @@ function Main() {
     <Container maxW="container.sm">
       <Grid templateColumns="repeat(2, 1fr)" gap={6} my={10}>
         <NewTask onSubmit={onSubmit} />
-        <SelectsTaks arrTask={tasks}/>
+        <SelectsTaks tasksLocal={tasksLocal} setTasks={setTasks}/>
       </Grid>
       <Center>
         <Box w="60%">
