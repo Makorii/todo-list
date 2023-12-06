@@ -1,9 +1,22 @@
 import React from 'react'
+import RenderTask from './RenderTask';
 
-function ContainerTasks() {
+
+function ContainerTasks({arrTask, onClose, onStatus}) {
   return (
-    <div>ContainerTasks</div>
-  )
+    <>
+      {arrTask ? arrTask.map((task) => (
+        <RenderTask 
+        key={self.crypto.randomUUID()}
+        id={task.id}
+        task={task.nombre}
+        onClose={onClose}
+        onStatus={onStatus}
+        status={task.estado}
+        />
+      )): ""}
+    </>
+  );
 }
 
 export default ContainerTasks
